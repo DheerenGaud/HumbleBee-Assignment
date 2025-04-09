@@ -1,0 +1,46 @@
+# Node.js
+node_modules/
+.env
+.env.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# MongoDB dump
+dump/
+
+# Logs
+logs
+*.log
+log/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Build files (React frontend build)
+build/
+dist/
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Optional: ignoring coverage reports
+coverage/
+
+# Optional: ignoring local database
+*.sqlite
+*.db
+
+# Optional: ignoring Mac or Linux system files
+*.swp
+*.lock
+
+# Optional: ignoring temporary files
+temp/
+tmp/
+.cache/
