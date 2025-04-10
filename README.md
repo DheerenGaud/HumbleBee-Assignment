@@ -26,7 +26,7 @@ Node.js, Express, MongoDB, Mongoose, JWT, Passport, EJS, Swagger, json2csv.
 1.  **Clone:**
     ```bash
     git clone https://github.com/DheerenGaud/HumbleBee-Assignment.git
-    cd Backend
+    cd HumbleBee-Assignment
     ```
 2.  **Install:**
     ```bash
