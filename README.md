@@ -39,7 +39,7 @@ Node.js, Express, MongoDB, Mongoose, JWT, Passport, EJS, Swagger, json2csv.
     **`.env` Example:**
     ```dotenv
     PORT=8000
-    MONGODB_URI=mongodb+srv://<username>:<password>@<your-cluster-url>/<database_name> # Or mongodb://localhost:27017/<database_name>
+    MONGODB_URI=mongodb+srv://<username>:<password>@<your-cluster-url> # Or mongodb://localhost:27017/<database_name>
     DB_NAME=YourDatabaseName
     ACCESS_TOKEN_SECRET=your_strong_random_access_secret
     ACCESS_TOKEN_EXPIRY=1d

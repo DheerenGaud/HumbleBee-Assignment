@@ -36,7 +36,7 @@ app.use(session({
     saveUninitialized: false, // Don't create session until something stored
     store: MongoStore.create({ // Store session in MongoDB
         mongoUrl:process.env.MONGODB_URI,
-        dbName: process.env.DB_NAME || 'Savaaree', // Use DB_NAME from .env
+        dbName: process.env.DB_NAME ,
         collectionName: 'sessions',
         ttl: 14 * 24 * 60 * 60 // = 14 days. Default is 14 days
     }),

@@ -7,16 +7,12 @@ import { asyncHandler } from '../utils/asyncHandler.js';
 const router = Router();
 // it is admin or not
 const ensureAdmin = (req, res, next) => {
-    // Check session first
-    console.log(req.session);
-    console.log(req.session.user);
-    console.log(req.session.user.role);
     
     if (req.session && req.session.user && req.session.user.role === 'admin') {
         return next(); // User is logged in via session and is admin
     }
     // If not in session, redirect to login
-    res.redirect('/admin/login');
+    res.redirect('/admin/');
 };
 
 

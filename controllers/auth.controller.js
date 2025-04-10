@@ -34,23 +34,25 @@ const generateAccessAndRefreshTokens = async (userId) => {
 // --- Register User ---
 const registerUser = asyncHandler(async (req, res) => {
   const { username, email, password, role } = req.body;
-
+  
+  
   if ([username, email, password].some((field) => !field?.trim())) {
     throw new ApiError(400, "Username, email, and password are required");
   }
-
+  console.log(username);
+  
   const existedUser = await User.findOne({ $or: [{ username }, { email }] });
   if (existedUser) {
     throw new ApiError(409, "User with email or username already exists");
   }
-
+  
   // Validate role if provided
   const userRole = role && ["admin", "beekeeper"].includes(role) ? role : "beekeeper";
-
+  
   const user = await User.create({
     username: username.toLowerCase(),
-    email: email.toLowerCase(),
     password, // Hashing happens in the pre-save hook
+    email: email.toLowerCase(),
     role: userRole,
   });
 
