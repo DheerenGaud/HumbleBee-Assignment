@@ -66,7 +66,7 @@ Node.js, Express, MongoDB, Mongoose, JWT, Passport, EJS, Swagger, json2csv.
 ## 👑 Admin Dashboard
 
 1.  Register a user with `"role": "admin"` via API (`POST /api/auth/register`).
-2.  Go to `http://localhost:8000/admin/login` (use your actual port).
+2.  Go to `http://localhost:8000/admin/` (use your actual port).
 3.  Log in with admin credentials.
 
 ## 📮 Postman Collection
