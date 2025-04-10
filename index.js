@@ -5,14 +5,10 @@ dotenv.config({
     path: "./.env"
 })
 import {app} from './app.js'
-// import { start } from './services/aws.js'
-
-
 
 connectDB()
 .then(() => {
     app.listen(process.env.PORT || 8000, () => {
-        // start()
         console.log(`⚙️ Server is running at port : ${process.env.PORT}`);
     })
 })

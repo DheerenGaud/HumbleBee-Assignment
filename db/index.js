@@ -17,11 +17,12 @@ import  {DB_NAME}  from "../constants.js";
 const connectDB = async () => {
     // console.log(DB_NAME);
     try {
-      await mongoose.connect(`mongodb://0.0.0.0:27017/${DB_NAME}`, {
+      await mongoose.connect(process.env.MONGODB_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
       });
       console.log("\n\ndatabase is connected...");
+      
     } catch (error) {
       console.log("some error in connecting database");
       throw error; 

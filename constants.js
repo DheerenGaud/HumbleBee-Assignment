@@ -1,2 +1,2 @@
 
-export const DB_NAME = "Savaaree"
+export const DB_NAME = "HumbleBEE"
