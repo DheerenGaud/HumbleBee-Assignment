@@ -1,7 +1,12 @@
 {
+    "name": "beetrack-backend",
     "version": "1.0.0",
     "type": "module",
-    "main": "src/index.js",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
     "dependencies": {
         "bcrypt": "^5.1.1",
         "body-parser": "^2.2.0",
@@ -18,5 +23,8 @@
         "passport-jwt": "^4.0.1",
         "swagger-jsdoc": "^6.2.8",
         "swagger-ui-express": "^5.0.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.0"
     }
 }
