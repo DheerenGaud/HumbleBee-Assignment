@@ -57,7 +57,7 @@ To provide a robust and scalable backend that:
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repository-url>
+    git clone https://github.com/DheerenGaud/HumbleBee-Assignment.git
     cd Backend
     ```
 
