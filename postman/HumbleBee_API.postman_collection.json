@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "32815b4a-5288-4d48-a37e-1080a5a89c96",
+		"name": "HumbleBee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19960613"
+	},
+	"item": [
+		{
+			"name": "addCrop",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "addHive",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"hiveId\": \"HIVE002\",\r\n \"datePlaced\": \"2025-04-12\",\r\n \"latitude\": 28.7041,\r\n \"longitude\": 77.1025,\r\n \"numColonies\": 4\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/hives",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"hives"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getHive",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/hives?startDate=2025-04-08&endDate=2025-04-20&page=1&limit=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"hives"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2025-04-08"
+						},
+						{
+							"key": "endDate",
+							"value": "2025-04-20"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getNearbyCrops",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/crops/nearby?latitude=19.00843&longitude=72.88425&radius=4&date=2025-05-30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"crops",
+						"nearby"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "19.00843"
+						},
+						{
+							"key": "longitude",
+							"value": "72.88425"
+						},
+						{
+							"key": "radius",
+							"value": "4"
+						},
+						{
+							"key": "date",
+							"value": "2025-05-30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usernameOrEmail\":\"ganeshgaud1111@gmail.com\",\r\n    \"password\":\"abc123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerUser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"Vishal\",\r\n  \"email\": \"derugaud@gamil.com\",\r\n  \"password\": \"abc123\",\r\n  \"role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

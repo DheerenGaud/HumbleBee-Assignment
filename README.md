@@ -133,12 +133,23 @@ A basic administrative dashboard is available for users with the 'admin' role.
 3.  **Login:** Use the credentials of the admin user created in step 1.
 4.  **Dashboard:** Upon successful login, you'll be redirected to `/admin/dashboard`, which shows basic statistics (total hives, crops, users) and links to management actions (like CSV export).
 
-## 📮 Postman Collection (Optional)
+## 📮 Postman Collection
 
-*   If you have created a Postman collection to test the API endpoints, include the `.json` file in the repository (e.g., in a `/postman` directory).
-*   **How to Use:** Import the provided `[Your_Collection_Name].postman_collection.json` file into your Postman application. You might need to configure environment variables in Postman (like `baseURL`, `accessToken`) for easier testing.
+Use the included Postman collection to easily test the API.
 
-*(Replace `[Your_Collection_Name]` with the actual filename, or remove this section if no collection is provided.)*
+*   **File:** `postman/HumbleBee_API.postman_collection.json` *(Adjust if needed)*
+
+### Quick Setup:
+
+1.  **Import:** Open Postman, click "Import", and select the `.json` file above.
+2.  **Environment:**
+    *   Create a new Postman Environment (click the eye icon > Add).
+    *   Add a variable: `baseURL` = `http://localhost:8000` (or your server URL).
+    *   **Select** this environment in the top-right dropdown.
+3.  **Run:**
+    *   Use `POST /registerUser` to create a user.
+    *   Run `POST /login`. This will automatically save your `accessToken`.
+    *   Other requests should now work using the saved token for authentication. Sample data is included in the request bodies.
 
 ## 💾 Database Schema Overview
 
