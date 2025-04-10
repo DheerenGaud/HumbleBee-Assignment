@@ -3,7 +3,7 @@ import  {DB_NAME}  from "../constants.js";
 
 
 const connectDB = async () => {
-    console.log("Cloud Db Connection");
+    console.log("Cloud Db Connection Started");
     
     try {
         const connectionInstance = await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`)
@@ -17,7 +17,7 @@ const connectDB = async () => {
 
 
 // const connectDB = async () => {
-  // console.log("Local Db Connection");
+  // console.log("Local Db Connection Started");
   //     try {
 //       await mongoose.connect(process.env.MONGODB_URI, {
 //         useNewUrlParser: true,
