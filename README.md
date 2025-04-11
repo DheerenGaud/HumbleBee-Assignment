@@ -72,12 +72,8 @@ This method uses the pre-built Docker image from Docker Hub.
     (Docker will automatically pull the image if it's not found locally)
     ```bash
     # Make sure you are in the 'HumbleBee-Assignment' directory containing your .env file
-    docker run \
-      -d \
-      --name humblebee-app \
-      -p 8000:8000 \
-      --env-file .env \
-      ganeshgaud1111102/humblebee:01
+    docker run -d --name humblebee-app -p 8000:8000 --env-file .env ganeshgaud1111102/humblebee:01
+
     ```
     *   `-d`: Run in detached mode (background).
     *   `--name`: Assign a name to the container.
