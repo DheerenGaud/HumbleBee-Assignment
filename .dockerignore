@@ -1,0 +1,45 @@
+# Ignore Node.js dependencies (installed within the container)
+node_modules
+
+# Ignore environment files (secrets should be injected at runtime)
+.env
+.env.*
+*.env
+
+# Ignore Git files
+.git
+.gitignore
+
+# Ignore Docker files
+Dockerfile
+.dockerignore
+
+# Ignore logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore IDE/OS files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+.DS_Store
+Thumbs.db
+
+# Ignore build/dist folders (if you had any)
+build/
+dist/
+
+# Ignore Postman collection
+postman/
+
+# Ignore temporary files/caches
+tmp/
+temp/
+*.swp
+*.lock
+.cache/
+coverage/
